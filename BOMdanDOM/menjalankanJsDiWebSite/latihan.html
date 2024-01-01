@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="test">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <script>
+        const test = document.getElementById('test');
+
+        // this handler will be executed only once when the
+        // cursor
+        // moves over the unordered list
+
+        test.addEventListener('mouseenter',
+            (event) => {
+                // highlight the mouseenter target
+                event.target.style.color = 'purple';
+
+                // reset the color after a short delay
+                setTimeout(() => {
+                    event.target.style.color = '';
+                }, 500)
+            },
+            false,
+        );
+
+
+        // this handler will be executed every time the cursor
+        // is moved over a different list item
+        test.addEventListener('mouseover', 
+            (event) => {
+
+                // highlight the mouseover target
+                event.target.style.color = 'orange';
+
+                // reset the color after a short delay
+
+                setTimeout(() => {
+                    event.target.style.color = '';
+                }, 500)
+
+            },
+            false,
+        );
+    </script>
+</body>
+</html>

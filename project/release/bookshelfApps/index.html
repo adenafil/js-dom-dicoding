@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="left">
+
+        <div class="container">
+
+            <div class="nav">
+                <div class="logo">
+                    <h1>Bookshelf Apps</h1>
+                    <img src="assets/icons8-messy-shelf-100.png" alt="Bookshelf">
+                </div>
+
+                <div hidden>
+                    <input type="text" id="input-search-text" placeholder="Cari Buku ...">
+                </div>
+
+                <div class="search">
+                    <img src="assets/search.svg" alt="search">
+                </div>
+
+            </div>
+
+            <!-- <div class="new-note-button"> -->
+
+                <button class="bukuBaru">
+                    <img id="plusplus" src="assets/plus.svg" alt="plus">
+                    <p>Buku Baru</p>
+                </button>
+
+            <!-- </div> -->
+
+            <!-- start recents -->
+
+            <div class="recent-addup">
+                <h1>Recents</h1>
+                <p>Buku Masih Kosong !</p>
+                <div class="recent-lists">
+                    <ul>
+                        <li class="gap-list">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- end recents -->
+
+
+            <!-- start More recents -->
+
+
+            <div class="more-addup">
+                <h1>Filter</h1>
+                <div class="more-lists">
+                    <ul>
+                        <li class="gap-list">
+                            <div class="contents-list sudah-dibaca">
+                                <img width="20px" height="20px" src="assets/eyesee.png" alt="buku">
+                                <p class="tes">Sudah Dibaca</p>
+                            </div>
+
+                            <div class="contents-list belum-dibaca">
+                                <img width="20px" height="20px" src="assets/eyebuta.png" alt="buku">
+                                <p class="tes">Belum Dibaca</p>
+                            </div>
+
+                            <div class="contents-list campur">
+                                <img width="20px" height="20px" src="assets/campur.png" alt="buku">
+                                <p class="tes">Bebas</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- end More recents -->
+
+        </div>
+            
+
+
+
+    </div>
+
+    <div class="middle">
+
+        <!-- start personal -->
+
+        <div class="folder-name">
+            <h1 id="folder-opened">Rak Buku</h1>
+        </div>
+
+        <!-- end personal -->
+
+        <!-- start list books -->
+
+        <div class="box-list-of-books">
+        </div>
+
+        <!-- end list books -->
+        
+    </div>
+
+    <div class="right">
+
+        <div class="select">
+
+            <img src="assets/select.svg" alt="select.svg">
+            <h1>Select a book to view</h1>
+            <p>Choose a book from the list on the left to view it contents
+                ,or create a </br> new book to add to your collection.
+            </p>
+
+        </div>
+
+        <div hidden>
+            <h1>Masukan Buku Baru</h1>
+
+            <form id="bookshelf" class="styleForm">
+                <label for="judul">Judul</label>
+                <input type="text" id="judul" required>
+                <label for="author">Penulis</label>
+                <input type="text" id="author" required>
+                <label for="year">Tahun</label>
+                <input type="number" id="year" min="1900" max="2030" required>
+                <label for="note">Catatan</label>
+                <textarea id="note" cols="30" rows="10" required></textarea>
+                <div class="checkbox">
+                    <label for="selesai">Sudah DiBaca</label>
+                    <input type="checkbox" id="selesai">
+                </div>
+            </form>
+            
+            <div class="btn-three enterbook">
+                <button id="btn-form">Masukan Buku ke rak</button>
+                <button class="kembali">Kembali</button>
+            </div>
+
+        </div>
+
+        <div hidden>
+            <h1 class="dataBuku">Data Buku</h1>
+
+            <form id="bookshelfSet" class="styleForm">
+                <label for="judulSet">Judul</label>
+                <input type="text" id="judulSet" required>
+                <label for="authorSet">Penulis</label>
+                <input type="text" id="authorSet" required>
+                <label for="yearSet">Tahun</label>
+                <input type="number" id="yearSet" min="1900" max="2030" required>
+                <label for="noteSet">Catatan</label>
+                <textarea id="noteSet" cols="30" rows="10" required></textarea>
+                <div class="checkbox">
+                    <label for="selesaiSet">Sudah DiBaca</label>
+                    <input type="checkbox" id="selesaiSet">
+                </div>
+            </form>
+
+            <div class="btn-three">
+                <button id="btn-formSet">Masukan Buku ke rak</button>
+                <button class="hapus">Hapus Buku Dari Rak</button>
+                <button class="kembali">Kembali</button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

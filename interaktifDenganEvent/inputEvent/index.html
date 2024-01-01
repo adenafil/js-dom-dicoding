@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form World</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contents">
+
+        <h2 align="center">Input Event Form</h2>
+
+        <div class="formContent">
+            <form id="formDataDiri" autocomplete="off">
+
+                <div class="form-element" id="fieldName">
+
+                    <label for="inputNama">Nama Panggillan:</label><br />
+                    <input
+                        type="text"
+                        id="inputNama"
+                        name="nama"
+                        placeholder="Nama panggilan Anda"
+                        maxlength="15"    
+                    > <br />
+
+                    <labe id="notifikasiSisaKarakter">
+
+                        sisa karakter: <span id="sisaKarakter"></span>
+
+                    </label>World
+
+                </div>
+
+                <div class="form-element" id="fieldCopy">
+
+                    <label for="inputCopy">
+
+                        <i>Copy</i> tulisan ini:
+
+                    </label> <br />
+
+                    <input
+                        type="text"
+                        id="inputCopy"
+                        name="copy"
+                        value="Hello World!"
+                        readonly
+                    / > <br />
+
+                </div>
+
+                <div class="form-element" id="fieldPaste">
+
+                    <label for="inputPaste">
+
+                        <i>Paste</i> tulisan disini:
+
+                    </label>
+
+                    <input
+                        id="inputPaste"
+                        type="text"
+                        name="paste"
+                        placeholder="Paste sesuatu di sini"    
+                    ></input>
+
+                </div>
+
+                <div class="form-element" id="fieldCaptcha">
+
+                    <label for="inputCaptcha">
+
+                        Tulis <i>captcha</i> berikut.
+
+                    </label>
+
+                    <img src="https://i.ibb.co/yy59QPB/Captcha.png" alt="Captcha" />
+                    <br />
+
+                    <input
+                        type="text"
+                        id="inputCaptcha"
+                        name="captcha"
+                        placeholder="Tulis captcha di sini"
+                    / >
+
+                    <p>
+                        Tekan Enter pada keyboard jika sudah selesai menulis
+                        <i>captcha</i>
+                    </p>
+
+                </div>
+
+                <div class="form-element" align="center">
+
+                    <input
+                        type="submit"
+                        id="submitButton"
+                        value="Submit Data"
+                        disabled
+                    / >
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
